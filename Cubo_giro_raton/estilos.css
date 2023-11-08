@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+  }
+  
+  .rubik {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 10s infinite linear;
+    transition: transform 0.5ms;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    opacity: 0.8;
+  }
+  
+  .front {
+    transform: translateZ(100px);
+    background:red;
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+    background: blue;
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background: green;
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+   background:yellow ;
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+     background: orange;
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background: white;
+  }
+  
+ 
+  
