@@ -1,0 +1,53 @@
+body{
+    background-color: darkblue;
+}
+
+h1{
+    text-align: center;
+    color: beige;
+    background-color: blue;
+    border: 2px solid cyan;
+}
+
+.content_button{
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+  }
+
+button:hover{
+    background-color: red;
+  }
+
+img{
+    float: left;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.txt{
+    color: beige;
+    background-color: green;
+    margin-left: 220px;
+    margin-right: 550px;
+   
+}
+.calc{
+    background-color: cadetblue;
+}
+
+.cub_gir_auto{
+    background-color: cadetblue;
+}
+
+.cub_gir_rat{
+    background-color: cadetblue;
+}
+
+.exp{
+    margin-top: 30px;
+}
+
