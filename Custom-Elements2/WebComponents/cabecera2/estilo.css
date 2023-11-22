@@ -1,0 +1,15 @@
+
+
+h1{
+    size: 50px;
+    color:green;
+
+}
+
+.titulo{
+    background-color: beige;
+    border: 2px solid grey;
+    border-radius: 10px;
+    text-align: center;
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="oneSwitch.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="switchdiv1">
+        <div class="swtich-container1">
+            <input type="checkbox" id="switch1">
+            <label for="switch1" class="lbl1"></label>
+        </div>
+    </div>
+    
+    <style>
+    #switchdiv1 {
+        padding-top: 30px;
+     padding-bottom: 30px;
+    }
+    
+    .lbl1{
+      display: inline-block;
+      width: 65px;
+      height: 33px;
+      background: #979797;
+      border-radius: 100px;
+      cursor: pointer;
+      position: relative;
+      transition: .2s;
+    }
+
+    .lbl1::after{
+      content: '';
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: #eee;
+      border-radius: 100px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      transition: .2s;
+    }
+
+    #switch1:checked + .lbl1::after{
+      left: 36px;
+    }
+
+    #switch1:checked + .lbl1{
+      background: black;
+    }
+
+    #switch1{
+      display: none;
+    }
+    </style>
+</body>
+</html>

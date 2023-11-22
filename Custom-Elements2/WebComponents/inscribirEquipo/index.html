@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="./equipo.js"></script>
+    
+</head>
+<body>
+    <section class="form_equipo_section">
+
+        <section class="info_equipo">
+            <section class="infoe">
+                
+                <h2>INCRIBIR<br>UN EQUIPO</h2>
+            </section>
+            <section class="info_liga">
+           
+            </section>
+        </section>
+
+        <form action="" class="form_equipo">
+            
+            <div class="eqipo_info">
+                <label for="names">Nombre *</label>
+                <input type="text" id="names">
+
+                <label for="dorsal">Ciudad *</label>
+                <input type="text" id="ciudad">
+
+                <label for="posicion">Presidente *</label>
+                <input type="text" id="presidente">
+
+                
+
+                
+                <input type="button" value="Enviar Datos" id="btnSend">
+            </div>
+        </form>
+
+    </section>
+
+      
+
+
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#btnSend').click(function () {
+                        var errores = '';
+
+                        // Validación para Nombre, Dorsal, Posición y Características...
+                        $(document).ready(function(){
+
+            $('#btnSend').click(function(){
+
+                var errores = '';
+
+                // Validado Nombre ==============================
+                if( $('#names').val() == '' ){
+                    errores += '<p>Escriba un nombre</p>';
+                    $('#names').css("border-bottom-color", "#F14B4B")
+                } else{
+                    $('#names').css("border-bottom-color", "#d1d1d1")
+                }   
+                
+                // Validado Dorsal ==============================
+                if( $('#ciudad').val() == '' ){
+                    errores += '<p>Ingrese una ciudad</p>';
+                    $('#ciudad').css("border-bottom-color", "#F14B4B")
+                } else{
+                    $('#ciudad').css("border-bottom-color", "#d1d1d1")
+                }
+
+                // Validado Correo ==============================
+                if( $('#presidente').val() == '' ){
+                    errores += '<p>Ingrese un presidente</p>';
+                    $('#presidente').css("border-bottom-color", "#F14B4B")
+                } else{
+                    $('#presidente').css("border-bottom-color", "#d1d1d1")
+                }
+
+
+                // ENVIANDO MENSAJE ============================
+                if( errores == '' == false){
+                    var mensajeModal = '<div class="modal_wrap">'+
+                                            '<div class="mensaje_modal">'+
+                                                '<h3>Errores encontrados</h3>'+
+                                                errores+
+                                                '<span id="btnClose">Cerrar</span>'+
+                                            '</div>'+
+                                        '</div>'
+
+                    $('body').append(mensajeModal);
+                }
+
+                // CERRANDO MODAL ==============================
+                $('#btnClose').click(function(){
+                    $('.modal_wrap').remove();
+                });
+            });
+
+            });
+
+
+                     
+                    });
+                });
+            </script>
+
+
+
+</body>
+</body>
+</html>

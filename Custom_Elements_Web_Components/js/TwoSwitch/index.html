@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="TwoSwitch.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="switchdiv2">
+        <div class="swtich-container2">
+            <input type="checkbox" id="switch2">
+            <label for="switch2" class="lbl2"></label>
+        </div>
+    </div>
+
+    <style>
+        #switchdiv2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.lbl2 {
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    background: #979797;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: .2s;
+}
+
+.lbl2::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: #eee;
+    border-radius: 4px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: .2s;
+}
+
+#switch2:checked + .lbl2::after {
+    left: 36px;
+}
+
+#switch2:checked + .lbl2 {
+    background: black;
+}
+
+#switch2 {
+    display: none;
+}
+
+    </style>
+    
+</body>
+</html>
